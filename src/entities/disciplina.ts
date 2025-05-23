@@ -22,6 +22,10 @@ export class Disciplina {
     return Array.from(this.alunoNota.keys());
   }
 
+  listarAlunosNotas(): Map<Aluno, number> {
+    return this.alunoNota;
+  }
+
   avaliar(aluno: Aluno, nota: number): void {
     if (!this.alunoNota.has(aluno)) {
       console.log("Aluno não está matriculado na disciplina.");
@@ -31,6 +35,10 @@ export class Disciplina {
       console.log("Nota inválida. Insira uma nota entre 0 e 10.");
       return;
     }
+    if (nota < 5) {
+      aluno.reclamarProvaDificil();
+    }
+
     this.alunoNota.set(aluno, nota);
   }
 }

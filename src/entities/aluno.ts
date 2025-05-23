@@ -1,6 +1,5 @@
 export enum Curso {
     ENGENHARIA_DE_SOFTWARE = "Engenharia de Software",
-    PSICOLOGIA = "Psicologia",
     LICENCIATURA_EM_COMPUTACAO = "Licenciatura em Computação"
   }
   
@@ -13,7 +12,8 @@ export enum Curso {
     ) {}
   
     reclamarProvaDificil(): void {
-      console.log(`${this.nome}: Professor, essa prova estava muito difícil!`);
+      console.log(`\n${this.nome}: Professor, essa prova estava muito difícil!`);
     }
+    
   }
   
